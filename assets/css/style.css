@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body {
     min-height: 100vh;
     display: flex;
@@ -14,13 +13,11 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
-
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
 .container {
     position: relative;
     width: 400px;
@@ -31,7 +28,6 @@ body {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
-
 .container::before {
     content: '';
     position: absolute;
@@ -42,12 +38,10 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
     animation: glow 8s infinite;
 }
-
 @keyframes glow {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 h2 {
     color: white;
     text-align: center;
@@ -55,12 +49,10 @@ h2 {
     font-size: 2em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 .input-group {
     position: relative;
     margin-bottom: 30px;
 }
-
 input {
     width: 100%;
     padding: 15px;
@@ -72,13 +64,11 @@ input {
     font-size: 1em;
     transition: all 0.3s ease;
 }
-
 input:focus {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 label {
     position: absolute;
     left: 15px;
@@ -88,7 +78,6 @@ label {
     pointer-events: none;
     transition: all 0.3s ease;
 }
-
 input:focus + label,
 input:not(:placeholder-shown) + label {
     top: -10px;
@@ -99,7 +88,6 @@ input:not(:placeholder-shown) + label {
     padding: 0 5px;
     border-radius: 5px;
 }
-
 .btn {
     width: 100%;
     padding: 15px;
@@ -113,7 +101,6 @@ input:not(:placeholder-shown) + label {
     position: relative;
     overflow: hidden;
 }
-
 .btn::after {
     content: '';
     position: absolute;
@@ -124,52 +111,48 @@ input:not(:placeholder-shown) + label {
     left: -50%;
     transition: all 0.5s ease;
 }
-
 .btn:hover::after {
     transform: scale(2);
 }
-
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
     transform: scale(0.95);
 }
-
 .forgot-password {
     text-align: center;
     margin-top: 20px;
 }
-
 .forgot-password a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .forgot-password a:hover {
     color: white;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
-/* Particles */
 .particles {
     position: absolute;
     width: 100%;
     height: 100%;
     pointer-events: none;
 }
-
 .particle {
     position: absolute;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     animation: float 5s infinite ease-in-out;
 }
-
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+}
+.error {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
 }
